@@ -1,15 +1,15 @@
-let userName = localStorage.getItem('userName');
-if (!userName || userName !== null || userName !== "") {
-    userName = prompt("Как вас зовут?");
-    localStorage.setItem('userName', userName);
-}
 document.addEventListener('DOMContentLoaded', () => {
+    let username = localStorage.getItem('username');
+    if (!username) {
+        username = prompt('Как вас зовут?:');
+        localStorage.setItem('username', username);
+    }
     const userGreeting = document.getElementById('user-greeting');
-    userGreeting.textContent = `Привет, ${userName}!`;
+    userGreeting.textContent = `Привет, ${username}!`;
 
     const overlay = document.getElementById('overlay');
     const today = new Date().toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' });
-    overlay.innerHTML = `<p>Привет, ${userName}!</p><p>Сегодня ${today}</p><p>Нажмите на любое место, чтобы продолжить</p>`;
+    overlay.innerHTML = `<p>Привет, ${username}!</p><p>Сегодня ${today}</p><p>Нажмите на любое место, чтобы продолжить</p>`;
 });
 
 function task0() {
