@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+}
+
+div#output p:hover::after {
+    content: attr(data-length);
+    display: block;
+    color: blue;
+    margin-top: 10px;
+}

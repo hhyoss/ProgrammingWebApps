@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Изучаем JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в мир JavaScript!</h1>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Что такое JavaScript?</h2>
+            <p>JavaScript — это язык программирования, который позволяет создавать интерактивные элементы на веб-страницах. Он нужен для улучшения пользовательского опыта на сайтах и делает их более динамичными.</p>
+            <p>С помощью JavaScript можно:</p>
+            <ul>
+                <li>Динамически изменять содержимое страницы</li>
+                <li>Создавать анимации</li>
+                <li>Обрабатывать пользовательский ввод</li>
+                <li>Работать с данными из внешних источников</li>
+            </ul>
+            <p>Однако, JavaScript не подходит для создания тяжелых серверных приложений или работы с файловой системой напрямую.</p>
+        </section>
+        <section id="tasks">
+            <h2>Демонстрация возможностей JavaScript</h2>
+            <button onclick="task0()">Задание 0: Проверка переменной</button>
+            <button onclick="task1()">Задание 1: Знак зодиака</button>
+            <button onclick="task2()">Задание 2: Вывод чисел</button>
+            <button onclick="task3()">Задание 3: Вирусная страница</button>
+            <button onclick="task4()">Задание 4: Проверка числа больше 5</button>
+            <button onclick="task5()">Задание 5: Четные числа</button>
+            <button onclick="task6()">Задание 6: Нечетные числа</button>
+            <button onclick="taskArray()">Работа с массивами</button>
+        </section>
+        <section id="quiz">
+            <h2>Тест по JavaScript</h2>
+            <button onclick="startQuiz()">Начать тест</button>
+            <div id="quiz-container"></div>
+            <div id="quiz-result"></div>
+        </section>
+    </main>
+    <div id="overlay" onclick="hideOverlay()"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>
