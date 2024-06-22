@@ -1,11 +1,12 @@
-// Function to ask user's name and store it in localStorage
 let userName = localStorage.getItem('userName');
-if (!userName) {
+if (!userName || userName !== null || userName !== "") {
     userName = prompt("Как вас зовут?");
     localStorage.setItem('userName', userName);
 }
-
 document.addEventListener('DOMContentLoaded', () => {
+    const userGreeting = document.getElementById('user-greeting');
+    userGreeting.textContent = `Привет, ${userName}!`;
+
     const overlay = document.getElementById('overlay');
     const today = new Date().toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' });
     overlay.innerHTML = `<p>Привет, ${userName}!</p><p>Сегодня ${today}</p><p>Нажмите на любое место, чтобы продолжить</p>`;
